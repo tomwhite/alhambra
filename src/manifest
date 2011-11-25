@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+Main-Class: org.tiling.alhambra.app.AlhambraApplication
+Class-Path: core.jar ga.jar tiles.jar
+

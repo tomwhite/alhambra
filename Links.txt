@@ -1,0 +1,28 @@
+This site has pictures of patterns from the Alhambra in Granada, Spain.
+
+http://weasel.cnrs.humboldt.edu/~spain/alh/index.html
+
+Sir Roger Penrose:
+
+http://www.worldofescher.com/misc/penrose.html
+
+Geometry Junkyard
+
+mailto:eppstein@ics.uci.edu
+
+----
+
+Bob Jenkins
+
+Here are my new solutions. (I have about 2000 more candidate new solutions, but I haven't developed the tools yet to judge them. Probably about 6 will be real solutions.) 
+
+Angles 45-270-22.5-112.5-90, four sides equal. This forms only one pattern. 
+ 
+Angles 100-140-60-160-80, all sides equal. The tile and its mirror image are required for this tiling. I just learned the circle is called a "Hisrchhorn Medallion", and was first found by Mike Hirschhorn in the 1970's. I tiled the floor of my half bath with this tiling. 
+ 
+Angles 108-36-252-36-108, all sides equal. This is easy to derive from a pentagram. It forms many interesting tilings. I've seen it in some of David Eppstein's tilings, so I didn't find it first. I painted it on the ceiling of my half bath. 
+ 
+Angles 60-90-150-30-210, all sides equal. It would be easy to lay floor tiles or linoleum made with this. 
+ 
+
+

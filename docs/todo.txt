@@ -1,0 +1,36 @@
+TODO (In rough order of priority.)
+
+Extend (or use a pattern!) SimplePatch and have a rollback method - an 
+undo(int i) method that takes the Patch back to a former state - useful for playing 
+with difficult tilings. Have a corresponding redo(int i) method. 
+ 
+Get colour changing to work properly!
+
+Allow tiles to have images on their surfaces (you can now, see Trimorphic, for the idea). 
+
+Refactor TileView. Add a RowsCollection object that handles rows of Lists,
+and a SelectableCollection which allows objects in the collection to be selected (on or off).
+Selections by dragging. 
+
+Write beans stuff for tile UIs. E.g. to turn Ammann bars on. Use Jython?
+
+Add deflate/inflate to Penrose tiles. Write PenroseTiler. 
+ 
+Fix deficiency in pentomino_Z and tetromino_skew symmetries. 
+ 
+Render dotted line on penrose.LB.
+
+Serializable. Improve Save As.. and Open file for Alhambra/Viewer2D.
+
+PNG save format.
+
+Find out about Postscript format. Save option for converting tilings to Postscript. 
+(Use Print to file option on Linux.) 
+ 
+AlWAYS TODO
+
+Write more javadoc.
+
+Write more building-block tiles!
+
+Write more unit tests.

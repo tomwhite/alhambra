@@ -1,0 +1,397 @@
+13/04/01 (15)
+Fixed bugs in transform method of all Tile implementations.
+
+11/04/01 (14)
+Refactored SimpleTile.
+Added test to show faulty SimplePatch.transform() implementation.
+
+06/04/01 (13)
+Added method getAdjacents(Tile tile) to Patch.
+
+03/04/01 (12)
+All core tile classes are now Cloneable.
+
+02/04/01 (11)
+Began making all core tile classes Cloneable.
+
+01/04/01 (10)
+Removed PrototilePatch. The equivalent now is a Patch and a PrototileSet pair - they are now more
+independent.
+
+31/03/01 (9)
+Begin refactoring of PrototilePatch.
+Broken!
+
+27/03/01 (8)
+Moved current prototile selection to a fixed pane at the top of the application window.
+
+27/03/01 (7)
+General tidy up.
+
+25/03/01 (6)
+Added re-run script menu option on Alhambra.
+
+24/03/01 (5)
+Added getSideIndex method to SimplePatch.
+
+24/03/01 (4)
+Fixed S-Curve.
+
+19/03/01 (3)
+Wrote test for bug in Edge - getVector2D() was wrong after a call to reverse().
+
+18/03/01 (2)
+Fixed bug in Edge - getVector2D() was wrong after a call to reverse().
+This caused subtle bugs for tiles with reflective symmetry.
+
+Moved to Visual Age
+
+11/02/01
+Replaced org.tiling.alhambra.geom.AffineTransform with java.awt.geom.AffineTransform 
+Made org.tiling.alhmabra.geom.Point2D a subclass of java.awt.geom.Point2D.Double
+
+04/02/01
+Made SimplePatch.add() more stringent: now can only add a tile if, in addition to
+previous conditions, no vertex of the tile that is not on one of the common edges is
+coincident with the patch's sides. 
+
+01/02/01
+Turned Jython model inside out. You now just run Jython scripts which can interact
+the "alhambra" instance. This provides more uniformity and power.
+
+27/01/01
+Switched to Java 1.3. Everything seems to work.
+
+21/01/01
+Added JythonAutoTiler that allows you to write Jython scripts that implement an
+AutoTiler.
+Fixed code AutoTilerViewer to not use Thread.suspend() since it is deprecated
+in 1.2 
+Added a "Next" button to AutoTilerViewer.
+
+01/01/01
+Made Patch extend Tile. Now all Patches can be viewed as Tiles!
+
+30/12/00
+Added a Decapod class that generates all 62 Decapods for the Penrose cartwheel.
+
+17/12/00
+Moved to a double-based framework. This may slow the application a little,
+but it allows larger tilings to be constructed before rounding error is a problem.
+
+10/12/00
+Reorganised. Build using ant.
+Added alhambra to package names.
+Factored out core.jar and ga.jar.
+
+22/12/99
+Current prototiles are correctly selected on startup.
+
+21/12/99
+Improved Prototile selection UI.
+
+19/12/99
+Added PrintPreview, first cut.
+
+9/12/99
+Added serialversionUID fields to all classes that are in the serialization tree of
+PrototilePatch.
+Added "Open" to Alhambra to allow loading of serialized PrototilePatch objects.
+
+30/11/99
+Renamed Tiler to PrototilePatch and put in tiling package.
+Changed AutoTiler and TilingEditor to wrap rather than extend Tiler (PrototilePatch)
+- gives more dynamic flexibility.
+
+26/11/99
+Added a Print... option to TilingEditor menu.
+
+19/11/99
+Added menu to TilingEditor to allow re-centring and add forced tiles.
+Added LB Penrose half-tile.
+
+14/11/99
+Created PatchUI.
+Major package changes - created org.tiling.gui.
+
+13/11/99
+Added code to allow Prototiles from jars to be loaded dynamically.
+Modified serialization to wok with dynamically loaded classes.
+Wrote equals() and hashCode() methods for Point2D, Triangle2D, Vector2D, 
+SimpleTile and SimplePatch.
+
+30/10/99
+Added a re-centre button to Viewer2D
+
+27/10/99
+Fixed bug - on adding first tile should be able to cycle through.
+Made two windows not overlap on first starting Alhmabra.
+
+26/10/99
+Added a test that tests rounding tolerance (TilerTest), and changed tolerance
+to 1e-5 from 1e-6 as a result.
+
+24/10/99
+Made Prototile.getTransformedTiles return a List (not a Set) to maintain ordering,
+and Prototiles are now grouped in Lists, rather than Sets.
+
+10/10/99
+Fixed marked edge/vertex bug, by enhancing SimpleTileJoin to properly enforce
+edge matching conditions.
+
+6/10/99
+Wrote ThinRhomb and FatRhomb.
+Fixed Arc2D problems - incompatibilities from JDK1.2RC1 to 1.2.2.
+
+5/10/99
+Switched to JDK1.2.2.
+Big push on serialization. Every class should now be Serializable.
+All open windows are saved when closing down, and re-opened on start up.
+(Needs JDK 1.2.2 due to bug in JInternalFrame/JDesktop in earlier versions of JDK.)
+
+29/9/99
+Added patterns to Penrose tiles and Goodman-Strauss tiles.
+
+27/9/99
+Separated UI and geometry logic in Tile - see TileUI. Still to do for Patch.
+
+25/9/99
+Wrote RegularPolygonFactory
+
+17/9/99
+Wrote new polygon package with some sample pentagons.
+
+16/9/99
+Extended and refactored SequentialTiler to allow any fitting tile to be added,
+rather than forcing the user to cycle through.
+Corresponding upgrades to TileEditor and TileView to allow mouse selection of
+fitting tile.
+Fixed bug in PolyominoConstructor
+
+9/9/99
+THIRD PUBLIC RELEASE! Version 0.3.
+
+8/9/99
+Wrote PrototileMenuViewer that contains a TileView of all known prototiles.
+Put penrose, polyomino, and goodmanstrauss package under a new
+org.tiling.tile package.
+
+7/9/99
+Re-wrote TileView so that it can span multiple rows.
+
+6/9/99
+Wrote AlhambraApplet and generated the strange HTML required to use the Java Plug-In.
+
+3/9/99
+Wrote GAChromosome.
+Got GATiler to actually breed!
+
+1/9/99
+Straightened out some method names in the Tiler hierarchy.
+Started GATiler in earnest.
+
+30/8/99
+Removed PolygonalTile throughout code.
+Changd Patch interface so that add and remove now return TileJoin objects.
+TileJoiner implements the new TileJoin interface.
+Wrote CircularRandomTiler.
+Removed Canvas2D parameter from constructors for Viewer2D - use setCanvas().
+
+29/8/99
+Renamed SimplePolygonalPatch to SimplePatch.
+Moved methods in PolygonalTile up to Tile.
+
+25/8/99
+Moved Tiler and its subclsses to tiler package.
+Add controls to allow RandomTilingViewer to stop and start RandomTiler. (Note that
+this uses the deprecated, and deadlock-prone, Thread.suspend method.)
+
+23/8/99
+Added getPerimeter() method to Tile.
+Added getPackingEfficiency() method to Patch.
+Moved get/setBackgroundColor() from PolygonalTile to Tile.
+
+22/8/99
+Added getArea() method to Tile.
+
+20/8/99
+Corrected code for SPP.remove.
+Made Edge immutable by making instance vars private and adding accessors.
+Wrote more tests.
+
+17/8/99
+Wrote TileJoiner and tests to take over from getCommonEdges() method in SPP.
+SPP.add now works.
+
+16/8/99
+Changed PolygonalTile interface so triangulate returns a List.
+Began to make SPP.add more stringent. (Introduced bug in doing so...)
+
+13/8/99
+Wrote unit tests using JUnit for geometry primitives and SPP.
+
+10/8/99
+SECOND PUBLIC RELEASE! Version 0.2.
+
+8/8/99
+Sorted out concurrent modification problems (iterator in SimplePolygonalPatch.paint).
+Wrote PrototileView and PrototileViewer. Removed TileViewer.
+Changed SymmetryGroup to allow you to specify the AffineTransform reflection.
+Improved polyomino symmetries.
+
+7/8/99
+Changed TileViewer to not use Viewer2D - it now just wraps a TileView in a
+JInternalFrame.
+
+31/7/99
+Started to use jEdit.
+Added dialog that allows you to select the Prototiles to use in TilingEditor.
+Changed colours of penrose tiles.
+Renamed SimpleViewer2D to Viewer2D.
+
+29/7/99
+Changed Alhambra application to allow multiple TilingEditor windows.
+Alhambra has a window (TileViewer) containing the current set of prototiles.
+
+3/7/99
+Re-wrote getClosestEdge(Point2D p) of SimplePolygonalPatch to return the edge which
+_is_ geometrically closest. See Tools2D.distance2PointToLineSegment(P, A, B).
+Wrote javadoc for Tools2D.
+
+1/7/99
+When you double click on the jar you get TilingEditor running with Penrose tiles.
+I.e. TilingEditor defaults to Penrose tiles. See app.Support.
+
+
+29/6/99
+Overrode triangulate in Polyomino to take advantage of the ease of triangulating
+a polyomino.
+PolyominoFactory can now create all the pentominoes.
+Removed SimpleTileFactory. Use AbstractPrototileFactory.
+Got TileView to work.
+Wrote trilobite and cross tiles (Goodman-Strauss) - but without markings.
+Added constructor to SimplePolygonalTile that allows creation from an array of edges.
+Static utility methods added to Edge.
+
+27/6/99
+Added JFileChooser dialog to Open and Save As... actions in Viewer2D.
+
+1/6/99
+Switched to Jikes compiler - incremental mode is cool!
+Implemented remove() and canRemove() methods of Patch in SPP.
+Supplemented TilingEditor to allow manual composition of tilings: you can now add and remove
+tiles, and cycle through the tiles that fit a particular edge. See SequentialTiler.
+Removed (temporarily) the colour chooser, since right mouse button is now used to remove tiles.
+
+24/3/99
+SimplePolygonalPatch is Serializable.
+Can save and restore Canvas2D objects.
+
+23/3/99
+Added a right-click listener that allows you to change the colour of the selected tile:
+Swing is nice!
+Added some (commented out) methods to Patch to allow removal of tiles.
+Added deserialize() method to Serializer (previously PrototileSerializer).
+
+20/3/99
+Wrote a new Tiler class that is more controllable than RandomTiler (which it almost replaces -
+save being Runnable).
+
+19/3/99
+Fixed subtle bug in Dart and Kite transform method (manifested in RandomTiler) 
+- incorrect order of transformation composition.
+Added a continuous zoom feature using JSlider - from "Small" to "Large".
+Single clicking on the tiling adds a (random) tile to the nearest free edge.
+
+16/3/99
+All GUI components made to inherit from, or use, Swing components. Get double buffering for free.
+Made view in Viewer2D draggable with the mouse.
+
+3/2/99
+Made jar runnable (by double-clicking).
+
+2/2/99
+Added more Patch functionality.
+Made instance variables of most classes private.
+Added some javadoc.
+
+1/2/99
+Changed to JDK1.2FCS.
+FIRST PUBLIC RELEASE! Version 0.1.
+
+31/1/99
+Changed all packages to org.tiling following registration of domain name with Internic.
+Added equals(), hashCode(), toString() methods to fundamental tile classes (Vertex, Edge, etc).
+Removed add and subtract methods from Vertex since they are meaningless.
+Added serialVersionUID (generated from serialver tool) to Serializable classes.
+ProtoKite and ProtoDart re-invented as the prototiles!
+
+26/1/99
+Dropped 'Proto' from ProtoDart and ProtoKite.
+Wrote PrototileSerializer.
+Made SPT Serializable.
+Made RandomTilingViewer accept command-line args that specify serialized Prototiles.
+Removed all Vectors and Enumerations & replaced with Lists and Iterators.
+
+23/1/99
+Major switch to 2D API.
+Wrote Viewer2D, Canvas2D (which SPP now inherits from).
+Viewer and Metric are now obsolete.
+Added background (colour) property to PolygonalTile which is used as the fill colour.
+
+16/1/99
+Corrected bug in RandomTiler.
+Fixed makefile, and added jar file.
+
+27/12/98
+Put all old changes in reverse chronological order in this file.
+Separated TO DOs to new file.
+Made prototile immutable. (SymmetryGroup is already)
+Wrote PolyominoFactory class and interface.
+
+30/11/98
+Work on RandomTiler. Still possibly buggy.
+
+29/11/98
+Fixed bug in SPT - clone originalVertices rather than just point to same Array.
+
+31/10/98 ish
+Major switch to the collections API.
+Renamed some methods e.g. getEdges() -> getSides().
+Wrote TileView to examine a PrototileSet.
+Renamed RandomTiling RandomTiler.
+Serialization work/preparation.
+Generated javadoc.
+
+12/10/98
+Made ProtoDart and ProtoKite compile. RandomTiling is now in tiling and compiles.
+
+5/9/98
+Polyomino compiles.
+Moved SimplePolygonalTile from penrose to tiling.
+
+1/9/98
+Re-worked RandomTiling into a more generic form for _any_ set of Prototiles.
+Some work on Polyomino (but not yet usable - or even compilable).
+
+29/8/98
+Added new equals methods in Vertex, MarkedVertex, Edge and MarkedEdge
+Now construct Darts and Kites out of MarkedVertex objects.
+Removed circular dependency in Tools2D <-> Triangle2D and Tools2D <-> Vector2D (equals)
+ - made equals stronger, put the weaker form in Tools2D
+Removed MarkedPolygonalTile and SimpleMarkedPolygonalPatch (and associated marking schemes) - 
+markings are now Vertex and Edge level not tile level things.
+
+28/8/98
+Added MarkedVertex - this is needed as well as MarkedEdge.
+
+27/8/98
+Changed EuclideanCanvas to Canvas2D. (Will ultimately become Graphics2D??)
+
+18/8/98
+Eliminated all Matrix2D and Transformation2D instances for new AffineTransform class
+
+17/8/98
+Reorganised naming. Made everything uk.co.zoo.tom.*.
+Packages are self-contained. Compile geom, then tiling, then tiling.penrose.
+Renamed Triangle to Triangle2D for consistency.

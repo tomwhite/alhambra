@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE slideshow SYSTEM "http://www.tiling.org/slideshow/slideshow.dtd">
+
+<slideshow title="Tiling: some sample graphics from the Alhambra program"
+	exiturl="../index.html"
+	showcaptions="no">
+
+	<slide title="Penrose Sun" src="penrose_sun.png" bordercolour="white">
+		Penrose kites and darts in the sun formation
+	</slide>
+
+	<slide title="Penrose Star" src="penrose_star.png" bordercolour="white">
+		Penrose kites and darts in the star formation
+	</slide>
+
+	<slide title="Trilobite and Cross" src="goodman-strauss.png" bordercolour="white">
+		Goodman-Strauss' Trilobite and Cross
+	</slide>
+
+	<slide title="Pentominoes" src="pentominoes.png" bordercolour="white">
+		Pentominoes of order 10
+	</slide>
+
+	<slide title="Ammann Polyominoes" src="penrose_polyominoes.png" bordercolour="white">
+		Penrose's aperiodic polyominoes, developed from a set by Ammann
+	</slide>
+
+</slideshow>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html><head><title>Tiling: download code for alhambra</title></head><body>
+	
+	
+		<h1>Code</h1>
+
+		<p>
+		This project
+ began as a personal investigation in Summer 1998 and I have worked on it sporadically
+		ever since. The code has been refactored continuously.
+		</p>
+
+		<p>
+		Development began on Windows using Sun's JDK 1.1,
+		1.2 betas, and 1.2.2. JDK 1.2 is now a minimum requirement for its Collections package and the
+		Java 2D API, and JDK 1.2.2 is strongly recommended for its bug fixes (a Swing bug fix
+		is certainly relied on, see <a href="docs/changes.txt">changes.txt</a> for details).
+		I have run the code using JDK 1.3, but I currently use 1.4 (so I am not sure if it still works
+		with older JDKs).
+		</p>
+
+		<p>
+		The complete distribution is downloadable as a
+		<a href="alhambra.zip">zip file</a>.
+		You can also browse the <a href="docs/api/overview-summary.html">javadoc</a> online,
+		and read the following documentation, all of which is included in the distribution.
+		</p>
+
+		<p>
+		<ul>
+		<li><a href="docs/changes.txt">changes.txt</a> - the change history</li>
+		<li><a href="docs/todo.txt">todo.txt</a> - new features to be added and bug fixes that are planned</li>
+		<li>GPL <a href="docs/licence.txt">licence.txt</a></li>
+		</ul>
+		</p>
+
+		<h1>Running Alhambra</h1>
+
+		<p>
+		Alhambra is built using <a href="http://jakarta.apache.org/">ant</a>, a Java make program from the Apache organisation.
+		<a href="http://www.jython.org/">Jython</a>, a Java implementation of the
+		Python scripting language is tightly integrated into Alhambra so this must be installed first.
+		Jython allows you to write scripts to generate tilings.
+		</p>
+
+		<p>
+		Unzip the Alhambra zip somewhere on your file system.
+		Then go to the alhambra subdirectory and edit run.bat, if you're using Windows, so
+		that the JYTHON_HOME variable is set to point to where you installed Jython. You should
+		also edit the Jython registry file (in the Jython home directory) so that
+		the python.path setting includes the scripts directory of the Alhambra install.
+		For other operating systems you'll need to write an equivalent launch script (but it shouldn't be
+		too difficult).
+		Then launch run.bat to start Alhambra.
+		</p>
+
+		<p>
+		The demonstration application supplied with this distribution is called
+		Alhambra. Alhambra allows muliple tiling windows to be open at any time.
+		Each window is an editor for a tiling that the user can build using the
+		mouse. The left mouse button adds a tile to the nearest free edge on the
+		tiling. You can cycle through the tiles that may be legally added to that
+		edge by further left mouse clicks on the tile. Clicking on a tile with
+		the right button removes it from the tiling.
+
+		There is also a prototiles window that determines the prototiles that
+		are used when building a tiling. Alhambra starts up with the Penrose
+		dart and kite as the current prototile set.
+		</p>
+
+		<p>
+		There are a number of demonstration Jython scripts in the scripts directory for
+		you to try out.
+		</p>
+
+		<h1>Testing</h1>
+
+		<p>
+		Alhambra is tested using Kent Beck and Eric Gamma's JUnit testing framework that runs
+		repeatable, automated unit tests. JUnit is not needed to run Alhambra, but if you wish
+		to run the tests or do some development on Alhambra you should
+		<a href="http://www.junit.org/">download</a> it.
+		See also Ward Cunningham's <a href="http://c2.com/cgi/wiki">WikiWikiWeb</a> for more on
+		<a href="http://c2.com/cgi/wiki?JavaUnit">JUnit</a>, and
+		<a href="http://c2.com/cgi/wiki?ExtremeProgramming">ExtremeProgramming</a> in general.
+		</p>
+
+	
+</body></html>

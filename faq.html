@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html><head><title>Tiling: Frequently Asked Questions</title></head><body>
+	
+	
+		<h1>FAQ</h1>
+
+		<p>
+		<b>1. What is Alhambra?</b>
+		</p>
+
+		<p>
+		Alhambra is a Java API designed to allow you to experiment with mathematical tilings,
+		also known as tessellations. There is an application built on top of the API to construct
+		tilings interactively using a mouse - a bit like doing a jigsaw. The API is designed to 
+		allow you to write your own tiles easily, see the sample Jython scripts
+		for a demonstration. Alhambra can also be used non-graphically, for example I have written a Genetic
+		Algorithm that learns to tile a plane efficiently given some prototiles.
+		</p>
+
+		<p>
+		<b>2. Why is it called Alhambra?</b>
+		</p>
+
+		<p>
+		The Moorish palace, Alhambra, in Granada, Spain is covered in tilings and
+		patterns. I visited in July 1998 and started writing a tiling program
+		shortly afterwards. Have a look at the <a href="Alhambra/index.html">slide show</a>
+		of photographs from the real Alhambra.
+		</p>
+
+		<p>
+		<b>3. What do I need to run Alhambra?</b>
+		</p>
+
+		<p>
+		Alhambra is written purely in Java, so you will need a Java 2 runtime.
+		</p>
+
+		<p>
+		<b>4. Can I use Alhambra from a browser?</b>
+		</p>
+
+		<p>
+		Not any more. I have written an applet but it is unsupported now since
+		I can't keep up with the browsers and their level of Java support, and would rather spend time improving the
+		code. You can try to use the applet code if you wish, but it will probably need some
+		tweaking to get it to run.
+		</p>
+
+		<p>
+		<b>5. How do I write my own tiles?</b>
+		</p>
+
+		<p>
+		You need to implement the <code>org.tiling.Tile</code> interface. This is most
+		simply done by subclassing <code>org.tiling.SimpleTile</code>, and the easiest way to
+		do this is using Jython, as Jython is embedded in Alhambra.
+		See the sample scripts for more details.
+		</p>
+
+		<p>
+		<b>6. What can I do with Alhambra if I don't want to write any code?</b>
+		</p>
+
+		<p>
+		You can play with the tiles that come with Alhambra. Currently Alhambra
+		comes with Penrose tiles, a selection of polyominoes (including the Ammann
+		set of aperiodic polyominoes popularised by Penrose), Goodman-Strauss'
+		aperiodic trilobite and cross, regular polygons, and some irregular
+		pentagons.
+		</p>
+
+		<p>
+		<b>7. Can I print tilings?</b>
+		</p>
+
+		<p>
+		Yes, there's a Print option. And it works well in Windows and Linux, at least.
+		Under Linux you can also print to a file in PostScript format.
+		</p>
+
+	
+</body></html>
